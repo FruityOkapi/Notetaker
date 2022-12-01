@@ -23,8 +23,5 @@ notes.post('/', (req, res) => {
     }
 });
 
-notes.delete('/', (req, res) => {
-    console.log(`${req}\n ${res}`);
-})
 
 module.exports = notes;

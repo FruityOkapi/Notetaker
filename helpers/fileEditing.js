@@ -22,16 +22,5 @@ const readAndWrite = (content, file) => {
     });
 }
 
-const deleteNote = (id, file) => {
-    fs.readFile(file, 'utf8', (error, data) => {
-        if (error) {
-            console.error(error);
-        } else {
-            const parse = JSON.parse(data);
-            parse.filter(item => item.id !== id);
-            writeInFile(file, parse);
-        }
-    })
-}
 
-module.exports = { readThisFile,  writeInFile, readAndWrite, deleteNote }
+module.exports = { readThisFile,  writeInFile, readAndWrite }
